@@ -4,7 +4,7 @@ MAINTAINER felix11h.dev@gmail.com
 USER root
 
 RUN apt-get update
-RUN apt-get install -y python3 python3-dev python3-pip git
+RUN apt-get install -y python python-dev python-pip git
 
 RUN pip install numpy scipy sympy
 
