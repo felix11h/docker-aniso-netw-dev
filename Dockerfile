@@ -4,7 +4,7 @@ MAINTAINER felix11h.dev@gmail.com
 USER root
 
 RUN apt-get update
-RUN apt-get install -y apt-utils python python-dev python-pip git
+RUN apt-get install -y apt-utils python python-dev python-pip git screen
 
 RUN pip install --upgrade pip==9.0.1
 RUN pip install numpy scipy matplotlib sumatra gitpython
