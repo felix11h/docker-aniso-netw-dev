@@ -4,7 +4,9 @@ MAINTAINER felix11h.dev@gmail.com
 USER root
 
 RUN apt-get -qy update
-RUN apt-get install -qy apt-utils python python-dev python-pip git screen 
+RUN apt-get install -qy apt-utils=1.2.24 python=2.7.11-1 python-dev=2.7.11-1 \
+                        python-pip=8.1.1-2ubuntu0.4 git=1:2.7.4-0ubuntu1.3 \
+			screen=4.3.1-2build1
 
 RUN pip install --upgrade pip==9.0.1
 RUN pip install numpy scipy matplotlib sumatra gitpython configparser nose ipython
