@@ -3,16 +3,21 @@ MAINTAINER felix11h.dev@gmail.com
 
 USER root
 
+# installing the latest version of these basic packages 
+# fixing versions through apt is possible, however previous
+# versions are often not available and the build will fail
 RUN apt-get -qy update
-RUN apt-get install -qy python=2.7.11-1 python-dev=2.7.11-1 \
-                        python-pip=8.1.1-2ubuntu0.4 git=1:2.7.4-0ubuntu1.3 \
-			screen=4.3.1-2build1
+RUN apt-get install -qy python python-dev python-pip git screen
 
 RUN pip install --upgrade pip==9.0.1
 RUN pip install numpy scipy matplotlib sumatra gitpython configparser nose ipython
 # later install through
 # pip install -r requirements.txt
 
+
+# the method of installing graph_tool is likely to change in the
+# future, so this command might need to be updated if build fails
+# refer to graph_tool documentation: https://graph-tool.skewed.de/
 RUN echo "deb http://downloads.skewed.de/apt/xenial xenial universe" | tee -a /etc/apt/sources.list
 RUN echo "deb-src http://downloads.skewed.de/apt/xenial xenial universe" | tee -a /etc/apt/sources.list
 
