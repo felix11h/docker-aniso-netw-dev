@@ -9,10 +9,15 @@ USER root
 RUN apt-get -qy update
 RUN apt-get install -qy python python-dev python-pip git screen
 
+# installing fixed python package versions through pip from
+# requirements.txt
 RUN pip install --upgrade pip==9.0.1
-RUN pip install numpy scipy matplotlib sumatra gitpython configparser nose ipython
-# later install through
-# pip install -r requirements.txt
+
+# pip install from requirements replaces the below command to
+# try and install exact versions:
+# RUN pip install numpy scipy matplotlib sumatra gitpython \
+#                 configparser nose ipython
+RUN pip install -r requirements.txt
 
 
 # the method of installing graph_tool is likely to change in the
