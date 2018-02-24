@@ -17,7 +17,10 @@ RUN pip install --upgrade pip==9.0.1
 # try and install exact versions:
 # RUN pip install numpy scipy matplotlib sumatra gitpython \
 #                 configparser nose ipython
-RUN more ./requirements.text
+RUN more /requirements.txt
+RUN more /home/requirements.txt
+RUN more ~/requirements.txt
+RUN ls
 RUN pip install -r ./requirements.txt
 
 
