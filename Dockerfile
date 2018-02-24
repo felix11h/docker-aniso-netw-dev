@@ -4,7 +4,7 @@ MAINTAINER felix11h.dev@gmail.com
 USER root
 
 RUN apt-get -qy update
-RUN apt-get install -qy apt-utils=1.2.24 python=2.7.11-1 python-dev=2.7.11-1 \
+RUN apt-get install -qy python=2.7.11-1 python-dev=2.7.11-1 \
                         python-pip=8.1.1-2ubuntu0.4 git=1:2.7.4-0ubuntu1.3 \
 			screen=4.3.1-2build1
 
