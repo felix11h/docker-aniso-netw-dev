@@ -10,7 +10,7 @@ RUN apt-get -qy update
 RUN apt-get install -qy python python-dev python-pip git screen
 
 # dependencis for building matplotlib
-RUN sudo apt-get -qy build-dep python-matplotlib
+RUN apt-get -qy build-dep python-matplotlib
 
 # installing fixed python package versions through pip 
 RUN pip install --upgrade pip==9.0.1
