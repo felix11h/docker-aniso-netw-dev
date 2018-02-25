@@ -14,7 +14,7 @@ RUN apt-get -qy build-dep python-matplotlib
 
 # installing fixed python package versions through pip 
 RUN pip install --upgrade pip==9.0.1
-RUN pip install numpy==1.8.2 scipy==0.14.0 matplotlib==1.4.2 sumatra==0.7.3 \
+RUN pip install numpy==1.14.1 scipy==1.0.0 matplotlib==1.4.2 sumatra==0.7.3 \
                 gitpython==1.0.1 nose==1.3.7 ipython==5.5.0
 
 
