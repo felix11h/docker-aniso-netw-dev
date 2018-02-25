@@ -28,7 +28,7 @@ RUN apt-key adv --keyserver pgp.skewed.de --recv-key 612DEFB798507F25
 RUN apt-get -qy update
 RUN apt-get install -qy python-graph-tool
 
-#RUN apt-get install -qy texlive-full
+RUN apt-get install -qy texlive-full
 
 RUN useradd -ms /bin/bash docker
 USER docker
