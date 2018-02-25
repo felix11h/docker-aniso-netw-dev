@@ -7,7 +7,10 @@ USER root
 # fixing versions through apt is possible, however previous
 # versions are often not available and the build will fail
 RUN apt-get -qy update
-RUN apt-get install -qy python python-dev python-pip pkg-config git screen
+RUN apt-get install -qy python python-dev python-pip git screen
+
+# dependencis for building matplotlib
+RUN apt-get install libpng-dev libjpeg8-dev libfreetype6-dev
 
 # installing fixed python package versions through pip 
 RUN pip install --upgrade pip==9.0.1
