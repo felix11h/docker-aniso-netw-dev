@@ -11,9 +11,8 @@ RUN apt-get install -qy python python-dev python-pip git screen
 
 # installing fixed python package versions through pip 
 RUN pip install --upgrade pip==9.0.1
-RUN pip install numpy==1.14.1 scipy==1.0.0 matplotlib==2.1.2 sumatra==0.7.4 \
-                gitpython==2.1.8 configparser==3.5.0 nose==1.3.7 \
-		ipython==5.5.0
+RUN pip install numpy==1.8.2 scipy==0.14.0 matplotlib==1.4.2 sumatra==0.7.3 \
+                gitpython==1.0.1 nose==1.3.7 ipython==5.5.0
 
 
 # the method of installing graph_tool is likely to change in the
