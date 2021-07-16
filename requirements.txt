@@ -3,7 +3,7 @@ backports.shutil-get-terminal-size==1.0.0
 configparser==3.5.0
 cycler==0.10.0
 decorator==4.2.1
-Django==1.8.18
+Django==2.2.24
 django-tagging==0.4.6
 docutils==0.14
 enum34==1.1.6
